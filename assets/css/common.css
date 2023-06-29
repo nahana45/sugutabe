@@ -1,0 +1,147 @@
+@charset "UTF-8";
+/* CSS Document */
+html {
+  font-size: 62.5%; /* 16px * 62.5% = 10px */
+  width: 100%;
+  box-sizing: border-box;
+}
+body {
+  color: #333; /* RGB */
+  font-family: "游明朝体", YuMincho, "游明朝", 'Yu Mincho', 'Hiragino Mincho ProN', 'serif';
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.8;
+  text-align: center;
+}
+a:hover {
+  opacity: 0.5;
+}
+.none {
+  display: none;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.button {
+  position: relative;
+}
+.button a {
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #FFF;
+  text-decoration: none;
+  background-color: #a0374a;
+  border-radius: 100vh;
+  padding: 20px 20vw;
+  box-shadow: 5px 5px #8b233a;
+}
+.button a:hover {
+  color: #FFF;
+  background: rgba(160	55	74 0.5);
+  
+}
+.button-limited {
+  color: #a0374a;
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+.button-limited::before {
+  content:"";
+  position: absolute;
+  transform: rotate(45deg);
+  width: 20px;
+  border-top: 1px solid #8b233a;
+  top: 50%;
+  left:-2em;
+}
+.button-limited::after {
+  content:"";
+  position: absolute;
+  transform: rotate(-45deg);
+  width: 20px;
+  border-top: 1px solid #8b233a;
+  top: 50%;
+  right: -2em;
+}
+.button-trial {
+  margin-bottom: 40px;
+}
+@media(min-width: 600px) {
+  .button a {
+    font-size: 3.0rem;
+    padding: 20px 100px;
+  }
+  .button-limited {
+    font-size: 2.4rem;
+  }
+}
+.logo {
+  width: 26%;
+  height: auto;
+}
+@media(min-width: 600px) {
+  .logo {
+    width: 17%;
+}
+}
+
+.slide-in {
+	overflow: hidden;
+    display: inline-block;
+}
+
+.slide-in_inner {
+	display: inline-block;
+}
+.leftAnime{
+    opacity: 0;/*事前に透過0にして消しておく*/
+}
+
+.slideAnimeLeftRight {
+	animation-name:slideTextX100;
+	animation-duration:0.8s;
+	animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+@keyframes slideTextX100 {
+  from {
+	transform: translateX(-100%); /*要素を左の枠外に移動*/
+        opacity: 0;
+  }
+
+  to {
+	transform: translateX(0);/*要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+
+.slideAnimeRightLeft {
+	animation-name:slideTextX-100;
+	animation-duration:0.8s;
+	animation-fill-mode:forwards;
+    opacity: 0;
+}
+
+
+@keyframes slideTextX-100 {
+  from {
+	transform: translateX(100%);/*要素を右の枠外に移動*/
+    opacity: 0;
+  }
+
+  to {
+	transform: translateX(0);/*要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
